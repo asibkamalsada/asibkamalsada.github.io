@@ -1,1 +1,15 @@
-Hello World!
+<?php
+
+$zip = new ZipArchive();
+$filename = "./duplicov_1.5.zip";
+
+if ($zip->open($filename, ZipArchive::CREATE)!==TRUE) {
+    exit("cannot open <$filename>\n");
+}
+
+$zip->addFile( "duplico/duplico_1.5-SNAPSHOT/ComparisonOpeningTool-1.5-SNAPSHOT-jar-with-dependencies.jar");
+$zip->close();
+
+readfile($filename);
+
+?>
