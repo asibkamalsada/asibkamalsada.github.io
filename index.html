@@ -1,15 +1,17 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+<title>Duplico</title>
+</head>
+<body>
 
-$zip = new ZipArchive();
-$filename = "./duplicov_1.5.zip";
+<h1>duplico v1.5</h1>
 
-if ($zip->open($filename, ZipArchive::CREATE)!==TRUE) {
-    exit("cannot open <$filename>\n");
-}
+<a href="duplico/duplico_1.5-SNAPSHOT/duplico-1.5-SNAPSHOT-jar-with-dependencies.jar" download>duplico v1.5</a>
+<a href="duplico/duplico_1.5-SNAPSHOT/ComparisonOpeningTool-1.5-SNAPSHOT-jar-with-dependencies.jar" download>ComparisonOpeningTool v1.5</a>
+<a href="duplico/duplico_1.5-SNAPSHOT/dbReset-1.5-SNAPSHOT-jar-with-dependencies.jar" download>dbReset v1.5</a>
+<a href="duplico/duplico_1.5-SNAPSHOT/hotfix-1.5-SNAPSHOT-jar-with-dependencies.jar" download>hotfix v1.5</a>
+<a href="duplico/duplico_1.5-SNAPSHOT/hotfix_02.12.2020.sql" download>hotfix_02.12.2020.sql</a>
 
-$zip->addFile( "duplico/duplico_1.5-SNAPSHOT/ComparisonOpeningTool-1.5-SNAPSHOT-jar-with-dependencies.jar");
-$zip->close();
-
-readfile($filename);
-
-?>
+</body>
+</html>
